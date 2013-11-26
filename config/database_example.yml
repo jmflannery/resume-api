@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: jackflannery_development
+  pool: 5
+  host: localhost
+  username:
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: jackflannery_test
+  pool: 5
+  host: localhost
+  username:
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: jackflannery_production
+  pool: 5
+  host: localhost
+  username:
+  password:

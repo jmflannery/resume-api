@@ -11,9 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20131126033716) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "toke_tokens", force: true do |t|
+    t.string   "key"
+    t.integer  "user_id"
+    t.datetime "expires_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "toke_tokens", ["key"], name: "index_toke_tokens_on_key", unique: true, using: :btree
+  add_index "toke_tokens", ["user_id"], name: "index_toke_tokens_on_user_id", using: :btree
+
+  create_table "toke_users", force: true do |t|
+    t.string   "username"
+    t.string   "password_digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

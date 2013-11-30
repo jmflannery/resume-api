@@ -5,6 +5,7 @@ gem 'rails', '4.0.1'
 
 gem 'pg'
 gem 'toke', path: '../toke'
+gem 'rack-cors'
 
 gem 'unicorn'
 gem 'capistrano', group: :development

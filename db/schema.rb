@@ -11,10 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131126033716) do
+ActiveRecord::Schema.define(version: 20131211151128) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "rez_addresses", force: true do |t|
+    t.text "building_number"
+    t.text "street_name"
+    t.text "secondary_address"
+    t.text "city"
+    t.text "state"
+    t.text "zip_code"
+    t.text "county"
+    t.text "country"
+  end
+
+  create_table "rez_profiles", force: true do |t|
+    t.string   "firstname",  limit: 32
+    t.string   "middlename", limit: 32
+    t.string   "lastname",   limit: 32
+    t.string   "nickname",   limit: 32
+    t.string   "prefix",     limit: 6
+    t.string   "suffix",     limit: 6
+    t.text     "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "toke_tokens", force: true do |t|
     t.string   "key"

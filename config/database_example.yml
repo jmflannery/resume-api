@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: jackflannery_development
+  database: rez_backbone_development
   pool: 5
   host: localhost
   username:
@@ -10,7 +10,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: jackflannery_test
+  database: rez_backbone_test
   pool: 5
   host: localhost
   username:
@@ -19,7 +19,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: jackflannery_production
+  database: rez_backbone_production
   pool: 5
   host: localhost
   username:

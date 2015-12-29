@@ -1,4 +1,4 @@
-jackflannery.me
-===============
+My Resume API
+=====================
 
-My personal website - jackflannery.me
+A JSON API for managing my resume

@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Jackflannery::Application.load_tasks
+ResumeApi::Application.load_tasks

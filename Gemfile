@@ -4,12 +4,20 @@ source 'https://rubygems.org'
 gem 'rails', '~> 4.0.2'
 
 gem 'pg'
-gem 'toke', path: '../toke'
-gem 'rez', path: '../rez'
 gem 'rack-cors'
+gem 'toke', git: 'https://github.com/jmflannery/toke.git', branch: 'master'
+gem 'rez', git: 'https://github.com/jmflannery/rez.git', branch: 'master'
 
-gem 'unicorn'
-gem 'capistrano', group: :development
+gem 'puma'
+
+group :doc do
+  # Deploy with Capistrano
+  gem 'capistrano', '~> 3.2', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-chruby',  require: false
+  gem 'capistrano3-puma',   require: false
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

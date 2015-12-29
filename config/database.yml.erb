@@ -2,8 +2,8 @@
   adapter: postgresql
   timeout: 5000
   encoding: utf8
-  database: <%= "#{fetch(:short_name)}_#{fetch(:rails_env)}" %>
+  database: <%= "#{fetch(:application)}_#{fetch(:rails_env)}" %>
   pool: 5
-  host: localhost
+  host: <%= fetch(:db_server) %>
   username: <%= "#{fetch(:application)}_role" %>
   password: <%= fetch(:db_passwd) %>

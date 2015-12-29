@@ -20,6 +20,8 @@ set :deploy_to, "/var/www/#{fetch(:application, 'application')}"
 
 set :db_passwd, ask('Database password:', 'secret', echo: false)
 
+set :db_server, '45.55.184.236'
+
 # role-based syntax
 # ==================
 
